@@ -32,4 +32,4 @@ jobs:
 
       - name: Push package to NuGet.org
         run: |
-          dotnet nuget push ./bin/Release/*.nupkg -s https://nuget.skywardapps.us/v3/index.json --skip-duplicate
+          dotnet nuget push ./bin/Release/*.nupkg -s https://nuget.skywardapps.us/v3/index.json
