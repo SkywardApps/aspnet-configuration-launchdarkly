@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Text.Json;
 using Amazon.SecretsManager;
 using Amazon.SecretsManager.Model;
@@ -21,7 +23,7 @@ namespace Skyward.Aspnet.Configuration
     {
         private readonly AwsSecretsConfigurationProviderOptions _options;
         private readonly Timer _timer;
-        private readonly object _lockObject = new();
+        private readonly object _lockObject = new object();
         private DateTime? _lastUpdate;
 
         private readonly int _maxRefreshSeconds = 60;
