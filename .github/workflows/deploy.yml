@@ -27,8 +27,8 @@ jobs:
       - name: Publish to NuGet.org
         uses: nuget/setup-nuget@v1
         with:
-          nuget-api-key: ${{ secrets.NUGET_API_KEY }}
+          nuget-api-key: ${{ secrets.SKYWARDNUGETAPIKEY }}
           nuget-version: '5.x'
 
-      # - name: Push package to NuGet.org
-      #   run: dotnet nuget push ./artifacts/*.nupkg --source https://api.nuget.org/v3/index.json --skip-duplicate
+      - name: Push package to NuGet.org
+        run: dotnet nuget push ./artifacts/*.nupkg --source https://api.nuget.org/v3/index.json --skip-duplicate

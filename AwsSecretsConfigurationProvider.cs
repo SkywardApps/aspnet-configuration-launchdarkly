@@ -6,7 +6,7 @@ using Amazon.SecretsManager;
 using Amazon.SecretsManager.Model;
 using Microsoft.Extensions.Configuration;
 
-namespace SkywardApps.AspnetConfiguration.AwsSecrets
+namespace Skyward.Aspnet.Configuration
 {
     public class AwsSecretsConfigurationProviderOptions
     {
