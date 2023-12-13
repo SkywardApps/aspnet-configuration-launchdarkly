@@ -29,6 +29,5 @@ jobs:
         with:
           nuget-api-key: ${{ secrets.SKYWARDNUGETAPIKEY }}
           nuget-version: '5.x'
-
-      - name: Push package to NuGet.org
-        run: dotnet nuget push ./artifacts/*.nupkg --source https://api.nuget.org/v3/index.json --skip-duplicate
+        run: |
+          dotnet nuget push ./artifacts/*.nupkg --source https://api.nuget.org/v3/index.json --skip-duplicate
