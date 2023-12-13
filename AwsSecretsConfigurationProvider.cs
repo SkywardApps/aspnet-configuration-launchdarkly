@@ -140,7 +140,7 @@ namespace Skyward.Aspnet.Configuration
 
     public static class AwsSecretsConfigurationExtensions
     {
-        public static IConfigurationBuilder AddAwsSecrets(this IConfigurationBuilder builder, AwsSecretsConfigurationProviderOptions? options)
+        public static IConfigurationBuilder AddAwsSecretsConfiguration(this IConfigurationBuilder builder, AwsSecretsConfigurationProviderOptions? options = null)
         {
             if (options != null)
             {
