@@ -24,12 +24,9 @@ jobs:
         run: |
           dotnet pack --configuration Release
 
-      - name: Publish to NuGet.org
-        uses: nuget/setup-nuget@v1
-        with:
-          nuget-api-key: ${{ secrets.SKYWARDNUGETAPIKEY }}
-          nuget-version: '5.x'
-
       - name: Push package to NuGet.org
         run: |
-          dotnet nuget push ./bin/Release/*.nupkg -s https://nuget.skywardapps.us/v3/index.json --skip-duplicate
+          dotnet nuget push ./bin/Release/*.nupkg \
+            -k ${{ secrets.SKYWARDNUGETAPIKEY }} \
+            -s https://api.nuget.org/v3/index.json ${fileName} \
+            --skip-duplicate
