@@ -22,7 +22,7 @@ jobs:
 
       - name: Build and pack
         run: |
-          dotnet pack --configuration Release --output ./artifacts
+          dotnet pack --configuration Release
 
       - name: Publish to NuGet.org
         uses: nuget/setup-nuget@v1
@@ -32,7 +32,4 @@ jobs:
 
       - name: Push package to NuGet.org
         run: |
-          ls
-          ls ./artifacts
-          
-          dotnet nuget push ./artifacts/*.nupkg --source https://api.nuget.org/v3/index.json --skip-duplicate
+          dotnet nuget push ./bin/Release/*.nupkg --source https://api.nuget.org/v3/index.json --skip-duplicate
