@@ -82,14 +82,17 @@ namespace Skyward.Aspnet.Configuration
         /// </summary>
         public override bool TryGet(string key, out string? value)
         {
-            if (Data.ContainsKey(key.ToLower()))
+            lock (_lockObject)
             {
-                value = Data[key.ToLower()];
-                return true;
-            }
+                if (Data.ContainsKey(key.ToLower()))
+                {
+                    value = Data[key.ToLower()];
+                    return true;
+                }
 
-            value = null;
-            return false;
+                value = null;
+                return false;
+            }
         }
 
         /// <summary>
