@@ -103,7 +103,7 @@ namespace Skyward.Aspnet.Configuration
             var secret = await client.GetSecretValueAsync(new GetSecretValueRequest
             {
                 SecretId = _options.SecretArn
-            });
+            }).ConfigureAwait(false);
 
             var overrides = JsonSerializer.Deserialize<Dictionary<string, string?>>(secret.SecretString);
             if (overrides == null)
