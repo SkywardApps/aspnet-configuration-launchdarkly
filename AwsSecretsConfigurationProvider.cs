@@ -113,7 +113,9 @@ namespace Skyward.Aspnet.Configuration
             {
                 return new Dictionary<string, string?>();
             }
-            var corrected = overrides.ToDictionary(kv => kv.Key.Replace("__", ":").ToLower(), kv => kv.Value);
+
+            // Convert to a format that ASPnet configuration can understand.
+            var corrected = overrides.ToDictionary(kv => kv.Key.Replace("__", ":"), kv => kv.Value);
 
             return corrected;
         }
