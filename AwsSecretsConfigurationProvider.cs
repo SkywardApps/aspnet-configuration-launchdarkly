@@ -115,6 +115,7 @@ namespace Skyward.Aspnet.Configuration
             }
 
             // Convert to a format that ASPnet configuration can understand.
+            // The keys must be lowercase, otherwise the override will not be applied.
             var corrected = overrides.ToDictionary(kv => kv.Key.Replace("__", ":").ToLower(), kv => kv.Value);
 
             return corrected;
