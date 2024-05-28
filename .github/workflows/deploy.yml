@@ -22,6 +22,7 @@ jobs:
 
       - name: Build and pack
         run: |
+          dotnet build --configuration Release |
           dotnet pack --configuration Release
 
       - name: Push package to NuGet.org
