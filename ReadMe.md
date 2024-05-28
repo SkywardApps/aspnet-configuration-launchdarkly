@@ -1,2 +1,2 @@
 # Overview
-Set configuration values using AWS secrets.
+Set configuration values using LaunchDarkly

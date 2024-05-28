@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34511.98
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aspnet-configuration-launchdarkly", "aspnet-configuration-launchdarkly.csproj", "{2A9972D3-5172-4EF1-9844-44F0FF619B80}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{70C38571-5B65-4064-BA14-B6D3F870505F}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		.github\workflows\deploy.yml = .github\workflows\deploy.yml
+		License.md = License.md
+		ReadMe.md = ReadMe.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A9972D3-5172-4EF1-9844-44F0FF619B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A9972D3-5172-4EF1-9844-44F0FF619B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A9972D3-5172-4EF1-9844-44F0FF619B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A9972D3-5172-4EF1-9844-44F0FF619B80}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9836CC36-2B11-4C98-934B-530A00C63D5F}
+	EndGlobalSection
+EndGlobal
