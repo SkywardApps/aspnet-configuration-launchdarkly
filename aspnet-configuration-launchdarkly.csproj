@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <PackageId>Skyward.Aspnet.Configuration</PackageId>
+    <PackageId>Skyward.Aspnet.Configuration.LaunchDarkly</PackageId>
     <Version>1.0.6</Version>
     <Authors>Skyward App Company, LLC</Authors>
     <Company>Skyward App Company, LLC</Company>
     <Copyright>Skyward App Company, LLC</Copyright>
-    <Description>Pulls configurations from AWS secrets.</Description>
+    <Description>Pulls configurations from LaunchDarkly.</Description>
   </PropertyGroup>
   
   <PropertyGroup>
@@ -22,13 +22,13 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
     <LangVersion>9</LangVersion>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AWSSDK.SecretsManager" Version="3.7.301.9" />
-    <PackageReference Include="AWSSDK.SecurityToken" Version="3.7.300.18" />
+    <PackageReference Include="LaunchDarkly.ServerSdk" Version="8.5.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
-    <PackageReference Include="System.Text.Json" Version="8.0.0" />
+    <PackageReference Include="System.Text.Json" Version="8.0.3" />
   </ItemGroup>
 
 </Project>
