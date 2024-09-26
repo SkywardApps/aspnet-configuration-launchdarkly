@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <PackageId>Skyward.Aspnet.Configuration.LaunchDarkly</PackageId>
-    <Version>1.0.6</Version>
+    <Version>1.1.0</Version>
     <Authors>Skyward App Company, LLC</Authors>
     <Company>Skyward App Company, LLC</Company>
     <Copyright>Skyward App Company, LLC</Copyright>
-    <Description>Pulls configurations from LaunchDarkly.</Description>
+    <Description>Pulls configurations from LaunchDarkly and provides a ConfigurationProvider</Description>
   </PropertyGroup>
   
   <PropertyGroup>
@@ -23,6 +23,7 @@
     <Nullable>enable</Nullable>
     <LangVersion>9</LangVersion>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackageReleaseNotes>All methods now case-insensitive, fixing some inconsistencies.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

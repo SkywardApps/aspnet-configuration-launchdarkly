@@ -59,9 +59,12 @@ namespace Skyward.Aspnet.Configuration
                     {
                         this.Data = data
                             .Where(kv => kv.Key.StartsWith(_prefix) && kv.Value != null)
-                            .ToDictionary(kv => kv.Key.Substring(_prefix.Length).Replace("-", ":"), kv => (string?)(kv.Value.IsString
-                                ? kv.Value.AsString
-                                : kv.Value.ToJsonString()));
+                            .ToDictionary(kv => kv.Key.Substring(_prefix.Length).Replace("-", ":").ToLower(), kv =>
+                            {
+                                return (string?)(kv.Value.IsString
+                                    ? kv.Value.AsString
+                                    : kv.Value.ToJsonString());
+                            });
                     }
                 }
             }
